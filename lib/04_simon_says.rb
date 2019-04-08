@@ -20,9 +20,9 @@ def first_word(a)
 end
 
 def titleize(a)
-    words = a.split
-    words.each do |word|
-        if (word == words.first && word.length <=3)
+    words = a.split   # j'éclate ma chaine en item pour array
+    words.each do |word| # pour chaque mots, je check si premier et <=3 car cap, sinon down et le reste Cap
+        if word == words.first && word.length <=3
             word.capitalize!
         elsif word.length < 3 
             word.downcase!
@@ -30,5 +30,5 @@ def titleize(a)
             word.capitalize!
         end
     end
-return words.join " "
+return words.join " " # je transforme mon tableau en chaine par un join
 end
