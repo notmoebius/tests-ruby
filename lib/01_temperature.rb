@@ -1,5 +1,5 @@
 def ftoc(temp)
-    return (temp - 32.0)/1.8
+    return ((temp - 32.0)/1.8).round
 end
 
 def ctof(temp)
