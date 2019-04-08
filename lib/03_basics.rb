@@ -33,10 +33,11 @@ def array_42(tab)
 end
 
 def magic_array(tab)
+    # je récupère le tableau que flatten, tri et exclu les doublon et je multiplie par 2
     c = tab.flatten.sort.uniq.map! {|x| x*=2 }
     c.each do |index|
-        if index %3 == 0
-            c.delete(index)
+        if index %3 == 0   # j'exclue les multiple de 3 par le modulo 3
+            c.delete(index) 
         end
     end
 return c
